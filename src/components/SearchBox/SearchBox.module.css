@@ -1,0 +1,12 @@
+.label {
+    text-align: left;
+    padding-left: 8px;
+    margin-bottom: 10px;
+}
+
+.input {
+    width: 272px;
+    margin-bottom: 20px;
+    display: flex;
+    align-self: flex-start;
+}
