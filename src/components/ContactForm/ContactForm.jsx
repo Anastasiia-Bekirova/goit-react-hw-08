@@ -1,5 +1,5 @@
 import { ErrorMessage, Formik, Form, Field } from 'formik';
-import { addContact } from '../../redux/contactsOps';
+import { addContact } from '../../redux/contacts/operations';
 import { useDispatch } from 'react-redux';
 
 
