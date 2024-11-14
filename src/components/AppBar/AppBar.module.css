@@ -1,7 +1,23 @@
 .header {
+    width: 100%;
+    position: fixed;
+        top: 0;
+        left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 16px;
-    border-bottom: 1px solid #2a363b;
+    margin-bottom: 150px;
+    border-bottom: 1px solid #65a7d3;;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    
+    background-color: #65a7d3;
+        color: #f3eab7;
+        padding: 0;
+       
+}
+.header a {
+    color: #f3eab7;
+    margin-left: 15px;
+    font-weight: bold;
+    font-size: 24px;
 }

@@ -7,11 +7,11 @@ import styles from './LoginForm.module.css';
 
 const loginUserSchema = Yup.object({
   email: Yup.string()
-    .email("Invalid email address")
-    .required("Email is required"),
+    .email("Invalid email")
+    .required("Required!"),
   password: Yup.string()
-    .min(8, "Password length must be at least 8 characters")
-    .required("Password is required"),
+    .min(8, "min 8 characters")
+    .required("Required!"),
 });
 
 const INITIAL_VALUES = {
@@ -28,13 +28,14 @@ const LoginForm = () => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <Formik
         initialValues={INITIAL_VALUES}
         validationSchema={loginUserSchema}
         onSubmit={handleSubmit}
       >
         <Form className={styles.form}>
+           <h2>Login Form</h2>
           <label className={styles.label}>
             <span>Email:</span>
             <Field
@@ -64,7 +65,7 @@ const LoginForm = () => {
             />
           </label>
 
-          <button type="submit">Sign In</button>
+          <button className={styles.button} type="submit">Sign In</button>
         </Form>
       </Formik>
     </div>

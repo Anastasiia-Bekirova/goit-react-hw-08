@@ -7,15 +7,15 @@ import styles from './RegistrationForm.module.css'
 
 const registerUserSchema = Yup.object({
   name: Yup.string()
-    .min(2, "Name must be at least 2 characters")
-    .max(20, "Name must be less than 20 characters")
-    .required("Name is required"),
+    .min(2, "min 2 characters")
+    .max(20, "max 20 characters")
+    .required("Required!"),
   email: Yup.string()
-    .email("Invalid email address")
-    .required("Email is required"),
+    .email("Invalid email")
+    .required("Required!"),
   password: Yup.string()
-    .min(8, "Password length must be at least 8 characters")
-    .required("Password is required"),
+    .min(8, "min 8 characters")
+    .required("Required!"),
 });
 
 const INITIAL_VALUES = {
@@ -39,13 +39,17 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div>
+    
+   
+    <div className={styles.container}>
+        
       <Formik
         initialValues={INITIAL_VALUES}
         validationSchema={registerUserSchema}
         onSubmit={handleSubmit}
       >
         <Form className={styles.form}>
+         <h2>Registration Form</h2>
           <label className={styles.label}>
             <span>Name:</span>
             <Field
@@ -89,10 +93,11 @@ const RegistrationForm = () => {
             />
           </label>
 
-          <button type="submit">Sign Up</button>
+          <button className={styles.button }type="submit">Sign Up</button>
         </Form>
       </Formik>
     </div>
+    
   );
 };
 
