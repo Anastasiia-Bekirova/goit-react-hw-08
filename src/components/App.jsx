@@ -35,7 +35,7 @@ const ContactsPage = lazy(() => import('../pages/ContactsPage/ContactsPage'));
         <Route
           path="/login"
           element={
-            <RestrictedRoute redirectTo="/tasks" component={<LoginPage />} />
+            <RestrictedRoute redirectTo="/contacts" component={<LoginPage />} />
           }
         />
         <Route
